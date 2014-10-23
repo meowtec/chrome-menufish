@@ -1,0 +1,72 @@
+window.ruleCtrl = function($scope) {
+  var saveOptions = function () {
+    utils.saveData('settingMore', $scope.settingMore)
+    utils.saveData('rules', $scope.rules)
+    chrome.extension.sendRequest({
+      ask: "reload"
+    })
+  }
+  var ctrlInit = function () {
+    $scope.rules = utils.getData('rules')
+    $scope.settingMore = utils.getData('settingMore')
+    $scope.$_suspend = {
+      search: {},
+      share: {}
+    }
+  }
+  $scope.editClick = function (rule) {
+    rule.$_name = rule.name
+    rule.$_url = rule.url
+    rule.$_edit = true
+  }
+  $scope.cancelClick = function (rule) {
+    rule.$_name = rule.$_url = null
+    rule.$_edit = false
+  }
+  $scope.submitClick = function (rule) {
+    rule.name = rule.$_name
+    rule.url = rule.$_url
+    rule.$_url = rule.$_url = null
+    rule.$_edit = false
+  }
+  $scope.deleteClick = function (rule, family) {
+    var rules = this.rules[family]
+    rules.splice(rules.indexOf(rule), 1)
+  }
+  $scope.addClick = function (type) {
+    var rule = $scope.$_suspend[type]
+    $scope.rules[type].push(rule)
+    $scope.$_suspend[type] = {}
+  }
+  $scope.resetClick = function () {
+    var resetConfirm = window.confirm("你确认重置选项吗？")
+    if (!resetConfirm) {
+      return
+    }
+    chrome.extension.sendRequest({
+      ask: "reset"
+    }, function () {
+      ctrlInit()
+      $scope.$digest();
+    })
+  }
+  $scope.$watch('rules',
+    function () {
+      saveOptions()
+    },
+    true
+  )
+  $scope.$watch('settingMore',
+    function () {
+      saveOptions()
+    },
+    true
+  )
+  $scope.message = {
+    onoff: {
+      true: '启用'
+      ,false: '禁用'
+    }
+  }
+  ctrlInit()
+}
