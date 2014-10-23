@@ -172,7 +172,7 @@ h1.nav-header {
 }
 .adm-icon {
   font-size: 12px;
-  color: #26a69a;
+  color: #8bc34a;
   padding: 0;
   margin: 0;
   margin-right: 5px;
@@ -193,7 +193,7 @@ h1.nav-header {
   color: #ccc;
 }
 .on-off-checkbox:checked {
-  color: #26a69a;
+  color: #8bc34a;
 }
 .on-off-checkbox:before {
   content: '\e80c';
@@ -220,9 +220,9 @@ h1.nav-header {
   border: none;
 }
 .rule-edit input {
-  color: #26a69a;
+  color: #8bc34a;
   border: none;
-  border-bottom: 1px solid #26a69a;
+  border-bottom: 1px solid #8bc34a;
   line-height: 20px;
 }
 .rule-edit input:hover {

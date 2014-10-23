@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Options</title>
+  <title>FISHMENU</title>
   <script src="lib/angular.min.js"></script>
   <script src="lib/zepto.js"></script>
   <script src="js/utils.js"></script>
@@ -79,7 +79,7 @@
     </div>
     <h3>其他</h3>
     <ul class="rule-list">
-      <li ng-class="{false: 'rule-disabled'}[googleImageSearch]">
+      <li ng-class="{false: 'rule-disabled'}[settingMore.googleImageSearch]">
         <span class="rule-name">Google 搜图</span>
         <input type="checkbox" ng-model="settingMore.googleImageSearch" class="on-off-checkbox" title="{{message.onoff[rule.enabled]}}">
       </li>

@@ -1,6 +1,6 @@
 {
   "name": "fishmenu",
-  "version": "1.0.1",
+  "version": "1.0.2",
 	"manifest_version": 2,
   "description": "右键菜单增强,为右键添加搜索和分享等功能。支持自定义搜索引擎和分享目标站点",
   "icons": {
