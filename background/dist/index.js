@@ -1,4 +1,5 @@
-var RULES = {
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var rules = {
   share: [
     {
       "name": "新浪微博",
@@ -64,6 +65,9 @@ var RULES = {
     }
   ]
 }
+module.exports = rules
+},{}],2:[function(require,module,exports){
+var defaultRules = require('./default').rules
 
 var appData
 
@@ -76,15 +80,16 @@ var googleImageSearch = {
 var appKeys = {
   'weibo': '1673339308'
 }
+
 // 初次使用初始化 App
 function appInit() {
-  RULES.share.forEach(function (item) {
+  defaultRules.share.forEach(function (item) {
     item.enabled = true
   })
-  RULES.search.forEach(function (item) {
+  defaultRules.search.forEach(function (item) {
     item.enabled = true
   })
-  localStorage.setItem('rules', JSON.stringify(RULES))
+  localStorage.setItem('rules', JSON.stringify(defaultRules))
   localStorage.setItem('settingMore', JSON.stringify({
     googleImageSearch: true
   }))
@@ -200,3 +205,5 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
 })
 initContextMenu()
 
+
+},{"./default":1}]},{},[2]);

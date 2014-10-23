@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-browserify": "*"
+  }
+}

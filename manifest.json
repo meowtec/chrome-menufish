@@ -11,7 +11,7 @@
   },
 	"options_page": "options/index.html",
 	"background": {
-    "scripts": [ "background/index.js" ]
+    "scripts": [ "background/dist/index.js" ]
   },
 	"permissions": ["contextMenus"]
 }
