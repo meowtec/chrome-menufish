@@ -1,3 +1,6 @@
+@color-main: #f06292;
+@color-main-d: #ec407a;
+@color-fit: #26a69a;
 body{
   padding: 0;
   margin: 0;
@@ -5,7 +8,13 @@ body{
   font-family: Helvetica, Tahoma, Arial, STHeiti, sans-serif;
   color:#333;
 }
-a{text-decoration: none;}
+a{
+  text-decoration: none;
+  color: @color-main;
+}
+a:hover{
+  color: #f57c00;
+}
 ul{
   padding: 0;
   margin: 0;
@@ -23,9 +32,6 @@ button, input{
 .navigation{
   width: 160px;
   padding-top: 20px;
-  /*border-right: 5px solid #8bc34a;
-  position: fixed;
-  height: 100%;*/
 }
 input{
   outline: none;
@@ -47,7 +53,7 @@ h1.nav-header{
   padding-left: 25px;
 }
 .nav-header sup, .nav-header sub{
-  color:#f06292;
+  color: @color-main;
   font-family: monospace;
   }
 .nav-list{
@@ -94,7 +100,7 @@ h1.nav-header{
 .sub-header {
 font-size: 30px;
 margin-top: 1.5em;
-color: #f06292;
+color: @color-main;
 }
 
 .rule-list li{
@@ -107,7 +113,7 @@ color: #f06292;
 
 .adm-icon {
   font-size: 12px;
-  color: #8bc34a;
+  color: @color-fit;
   padding: 0;
   margin: 0;
   margin-right: 5px;
@@ -127,7 +133,7 @@ color: #f06292;
   color: #ccc;
 }
 .on-off-checkbox:checked{
-  color: #42bd41;
+  color: @color-fit;
 }
 .on-off-checkbox:before{
   content: '\e80c';
@@ -153,9 +159,9 @@ color: #f06292;
   border: none;
 }
 .rule-edit input{
-  color: #8bc34a;
+  color: @color-fit;
   border: none;
-  border-bottom: 1px solid #8bc34a;
+  border-bottom: 1px solid @color-fit;
   line-height: 20px;
 }
 .rule-edit input:hover{
@@ -181,12 +187,12 @@ color: #f06292;
 .reset-button{
   margin-top: 80px;
   padding: 5px 35px;
-  background: #ff9e80;
+  background: @color-main;
   border: none;
-  border-bottom: 2px solid #ff7043;
+  border-bottom: 2px solid @color-main-d;
   color: #fff;
   cursor: pointer;
 }
 .reset-button:hover{
-  background: #ff7043;
+  background: @color-main-d;
 }

@@ -7,6 +7,10 @@ body {
 }
 a {
   text-decoration: none;
+  color: #f06292;
+}
+a:hover {
+  color: #f57c00;
 }
 ul {
   padding: 0;
@@ -27,9 +31,6 @@ input {
 .navigation {
   width: 160px;
   padding-top: 20px;
-  /*border-right: 5px solid #8bc34a;
-  position: fixed;
-  height: 100%;*/
 }
 input {
   outline: none;
@@ -79,6 +80,7 @@ input[type="text"]:focus {
 }
 .md-box h3 {
   font-size: 1.17em;
+  color: #26a69a;
 }
 .md-box h4 {
   font-size: 1em;
@@ -98,8 +100,8 @@ input[type="text"]:focus {
 }
 .md-box .code-block {
   display: block;
-  padding: 5px 10px;
-  margin: 5px 0;
+  padding: 8px 10px;
+  margin: 10px 0;
   background: #666;
   color: #fff;
   border-radius: 6px;
@@ -170,7 +172,7 @@ h1.nav-header {
 }
 .adm-icon {
   font-size: 12px;
-  color: #8bc34a;
+  color: #26a69a;
   padding: 0;
   margin: 0;
   margin-right: 5px;
@@ -191,7 +193,7 @@ h1.nav-header {
   color: #ccc;
 }
 .on-off-checkbox:checked {
-  color: #42bd41;
+  color: #26a69a;
 }
 .on-off-checkbox:before {
   content: '\e80c';
@@ -218,9 +220,9 @@ h1.nav-header {
   border: none;
 }
 .rule-edit input {
-  color: #8bc34a;
+  color: #26a69a;
   border: none;
-  border-bottom: 1px solid #8bc34a;
+  border-bottom: 1px solid #26a69a;
   line-height: 20px;
 }
 .rule-edit input:hover {
@@ -245,12 +247,12 @@ h1.nav-header {
 .reset-button {
   margin-top: 80px;
   padding: 5px 35px;
-  background: #ff9e80;
+  background: #f06292;
   border: none;
-  border-bottom: 2px solid #ff7043;
+  border-bottom: 2px solid #ec407a;
   color: #fff;
   cursor: pointer;
 }
 .reset-button:hover {
-  background: #ff7043;
+  background: #ec407a;
 }
