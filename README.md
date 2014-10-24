@@ -3,19 +3,6 @@ chrome-fishmenu
 
 chrome 右键菜单，自定义搜索和分享。
 
-### 开发步骤
-> 普通用户略过
-
-#### 1. 安装 node 和 npm
-略
-#### 2. watch
-```
-  npm install  
-  grunt
-```
-#### 3. 编码和提交
-略
-
 ### 如何安装
 方式1：  
 使用 Chrome 访问[https://chrome.google.com/webstore/detail/fishmenu/ocdigobahepkapkegppnioklpjgbppok](https://chrome.google.com/webstore/detail/fishmenu/ocdigobahepkapkegppnioklpjgbppok)   
@@ -29,3 +16,18 @@ chrome 右键菜单，自定义搜索和分享。
 
 方式3：  
 如果可能，你也可以从方式2中解压得到的文件夹中找到 `.crx` 文件然后从本地拖放到`扩展程序`页面。
+
+
+### 一起开发
+
+#### 1. 安装 git, node 和 npm
+略
+#### 2. fork 一份项目，clone到本地
+略
+#### 2. 初始化
+```
+  npm install  
+  grunt
+```
+#### 3. 开发
+编写代码，提交，pull request
