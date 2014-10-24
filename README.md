@@ -16,7 +16,7 @@ chrome 右键菜单，自定义搜索和分享。
 
 
 方式3：  
-如果可能，你也可以从方式2中解压得到的文件夹中找到 `.crx` 文件然后从本地拖放到`扩展程序`页面。
+如果可能，你也可以从方式2中解压得到的文件夹中找到 [.crx](https://github.com/meowtec/chrome-fishmenu/raw/master/fishmenu_v1.1.0.crx) 文件然后从本地拖放到`扩展程序`页面。
 
 
 ### 想一起开发？
