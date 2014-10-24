@@ -41,7 +41,9 @@
     "module",
     "require",
     "exports",
-    "chrome"
+    "chrome",
+    "angular",
+    "$"
   ],
   "lastsemic": true,
   "nonbsp": true,
