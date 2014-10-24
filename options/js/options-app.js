@@ -1,3 +1,4 @@
+var utils = window.utils
 window.ruleCtrl = function($scope) {
   var saveOptions = function () {
     utils.saveData('settingMore', $scope.settingMore)
@@ -64,8 +65,8 @@ window.ruleCtrl = function($scope) {
   )
   $scope.message = {
     onoff: {
-      true: '启用'
-      ,false: '禁用'
+      true: '点击禁用',
+      false: '点击启用'
     }
   }
   ctrlInit()
