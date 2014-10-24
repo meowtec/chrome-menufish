@@ -20,7 +20,7 @@ chrome 右键菜单，自定义搜索和分享。
 方式1：  
 使用 Chrome 访问[https://chrome.google.com/webstore/detail/fishmenu/ocdigobahepkapkegppnioklpjgbppok](https://chrome.google.com/webstore/detail/fishmenu/ocdigobahepkapkegppnioklpjgbppok)   
 或者在[webstore](https://chrome.google.com/webstore)中搜索 fishmenu，然后安装。   
-如果你访问不了[webstore](https://chrome.google.com/webstore), 请和我一起大喊三声：「FUCK GFW」！！！
+如果你访问不了[webstore](https://chrome.google.com/webstore), 请默念三声：`FUCK GFW`
 
 方式2：  
 点击右侧 - `Download Zip`

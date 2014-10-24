@@ -83,6 +83,10 @@
         <span class="rule-name">Google 搜图</span>
         <input type="checkbox" ng-model="settingMore.googleImageSearch" class="on-off-checkbox" title="{{message.onoff[rule.enabled]}}">
       </li>
+      <li ng-class="{false: 'rule-disabled'}[settingMore.baiduImageSearch]">
+        <span class="rule-name">百度搜图</span>
+        <input type="checkbox" ng-model="settingMore.baiduImageSearch" class="on-off-checkbox" title="{{message.onoff[rule.enabled]}}">
+      </li>
     </ul>
     <button class="reset-button" ng-click="resetClick()"><i class="icon icon-attention"></i>重置</button>
   </div>

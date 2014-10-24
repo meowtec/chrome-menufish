@@ -39,7 +39,8 @@
   "browser": true,
   "predef": [
     "module",
-    "exports"
+    "exports",
+    "chrome"
   ],
   "lastsemic": true,
   "nonbsp": true,
