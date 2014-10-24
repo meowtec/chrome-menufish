@@ -10,7 +10,7 @@ chrome 右键菜单，自定义搜索和分享。
 如果你访问不了[webstore](https://chrome.google.com/webstore), 请默念三声：`FUCK GFW`
 
 方式2：  
-点击右侧 - `Download Zip`  
+点击项目 Github 页面右侧的 [Download Zip](https://github.com/meowtec/chrome-fishmenu/archive/master.zip)  
 解压下载得到的 `.zip` 文件  
 进入 `扩展程序` - `开发者模式` - `加载正在开发的扩展程序`, 选择解压得到的文件夹。
 
