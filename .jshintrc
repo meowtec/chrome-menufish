@@ -39,6 +39,7 @@
   "browser": true,
   "predef": [
     "module",
+    "require",
     "exports",
     "chrome"
   ],
