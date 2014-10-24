@@ -9,14 +9,16 @@ chrome 右键菜单，自定义搜索和分享。
 或者在 [webstore](https://chrome.google.com/webstore) 中搜索 `fishmenu`，然后安装。   
 如果你访问不了 [webstore](https://chrome.google.com/webstore) , 请默念三声：`FUCK GFW`
 
-方式2：  
+方式2：
+下载 [fishmenu_v1.1.0.crx.crx](https://github.com/meowtec/chrome-fishmenu/raw/master/fishmenu_v1.1.0.crx)   
+打开`扩展程序`页面，把文件拖进去。
+
+
+方式3：  
 点击项目 Github 页面右侧的 [Download Zip](https://github.com/meowtec/chrome-fishmenu/archive/master.zip)  
 解压下载得到的 `.zip` 文件  
 进入 `扩展程序` - `开发者模式` - `加载正在开发的扩展程序`, 选择解压得到的文件夹。
 
-
-方式3：  
-如果可能，你也可以从方式2中解压得到的文件夹中找到 [.crx](https://github.com/meowtec/chrome-fishmenu/raw/master/fishmenu_v1.1.0.crx) 文件然后从本地拖放到`扩展程序`页面。
 
 
 ### 想一起开发？
