@@ -13,8 +13,13 @@ $(function(){
   })
 
   // 更新
+  var version = {
+    v: '1.1.4',
+    build: 5
+  }
+  $('#cureent-version').html(version.v)
   var updateNotice = function(data){
-    var build = 4
+    var build = version.build
     if(data.build > build){
       $('#nav-list .help').addClass('notice')
       $('#version-notice-text').html('<a href="http://fish.cateyes.blue/">Menu fish</a> 有新版本：' + data.v)
