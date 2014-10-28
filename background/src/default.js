@@ -43,6 +43,10 @@ var rules = {
       "url": "http://image.baidu.com/i?word={%word%}&ie=utf-8"
     },
     {
+      "name": "百度地图",
+      "url": "http://map.baidu.com/m?word={%word%}&ie=utf-8"
+    },
+    {
       "name": "虾米音乐",
       "url": "http://www.xiami.com/search?key={%word%}"
     },
