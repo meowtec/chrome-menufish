@@ -3,6 +3,9 @@ chrome-menufish
 
 chrome 右键菜单，自定义搜索和分享。
 
+### HOME
+[fish.cateyes.blue](http://fish.cateyes.blue/)
+
 ### 如何安装
 方式1：  
 使用 Chrome 访问[https://chrome.google.com/webstore/detail/ocdigobahepkapkegppnioklpjgbppok](https://chrome.google.com/webstore/detail/ocdigobahepkapkegppnioklpjgbppok)
