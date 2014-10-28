@@ -1,3 +1,18 @@
+// Array.prototype.find
+if(!Array.prototype.find){
+  Array.prototype.find = function(callback){
+    var result = undefined
+    this.some(function(item){
+      var m = callback(item)
+      if(m){
+        result = item
+      }
+      return m
+    })
+    return result
+  }
+}
+
 var appData
 
 var googleImageSearch = {
