@@ -11,7 +11,7 @@
   },
   "options_page": "options/index.html",
   "background": {
-    "scripts": ["background/dist/index.js"]
+    "scripts": ["background/default.js", "background/index.js"]
   },
   "permissions": ["contextMenus"],
   "homepage_url": "http://fish.cateyes.blue/"

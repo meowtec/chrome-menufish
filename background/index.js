@@ -1,5 +1,3 @@
-var defaultRules = require('./default')
-
 var appData
 
 var googleImageSearch = {

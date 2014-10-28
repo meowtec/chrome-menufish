@@ -1,4 +1,4 @@
-var rules = {
+var defaultRules = {
   share: [
     {
       "name": "新浪微博",
@@ -68,5 +68,3 @@ var rules = {
     }
   ]
 }
-
-module.exports = rules
