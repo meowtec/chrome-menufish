@@ -10,7 +10,7 @@ chrome 右键菜单，自定义搜索和分享。
 如果你访问不了 [webstore](https://chrome.google.com/webstore) , 请默念三声：`FUCK GFW`
 
 方式2：
-下载 [menufish_latest.crx](https://github.com/meowtec/chrome-menufish/raw/master/Menufish_latest.crx)
+下载 [menufish_latest.crx](https://github.com/meowtec/chrome-menufish/raw/master/menufish_latest.crx)
 打开`扩展程序`页面，把文件拖进去。
 
 
