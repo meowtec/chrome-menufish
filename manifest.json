@@ -14,5 +14,11 @@
     "scripts": ["background/default.js", "background/index.js"]
   },
   "permissions": ["contextMenus"],
-  "homepage_url": "http://fish.cateyes.blue/"
+  "homepage_url": "http://fish.cateyes.blue/",
+  "content_scripts": [
+    {
+      "matches": ["http://fish.cateyes.blue/*"],
+      "js": ["content/index.js"]
+    }
+  ]
 }
