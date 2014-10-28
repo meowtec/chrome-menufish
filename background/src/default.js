@@ -31,7 +31,7 @@ var rules = {
       "url": "https://www.google.com.hk/#&q={%word%}&ie=utf-8"
     },
     {
-      "name": "百度搜索",
+      "name": "百度",
       "url": "http://www.baidu.com/s?wd={%word%}&ie=utf-8"
     },
     {
@@ -63,7 +63,7 @@ var rules = {
       "url": "http://www.soku.com/search_video/q_{%word%}"
     },
     {
-      "name": "新浪微博搜索",
+      "name": "微博",
       "url": "http://s.weibo.com/weibo/{%word%}"
     }
   ]
