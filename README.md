@@ -6,7 +6,7 @@ chrome 右键菜单，自定义搜索和分享。
 ### 如何安装
 方式1：  
 使用 Chrome 访问[https://chrome.google.com/webstore/detail/menufish/ocdigobahepkapkegppnioklpjgbppok](https://chrome.google.com/webstore/detail/menufish/ocdigobahepkapkegppnioklpjgbppok)   
-或者在 [webstore](https://chrome.google.com/webstore) 中搜索 `menufish`，然后安装。   
+或者在 [webstore](https://chrome.google.com/webstore) 中搜索 `Menufish`，然后安装。
 如果你访问不了 [webstore](https://chrome.google.com/webstore) , 请默念三声：`FUCK GFW`
 
 方式2：
