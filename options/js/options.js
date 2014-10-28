@@ -1,4 +1,5 @@
 $(function(){
+  // tab 导航
   var tabButtons = $('#nav-list button'),
       containers = $('#main-container').children()
 
@@ -10,4 +11,18 @@ $(function(){
     var target = button.attr('tab-target')
     $(target).show()
   })
+
+  // 更新
+  var updateNotice = function(data){
+    var build = 4
+    if(data.build > build){
+      $('#nav-list .help').addClass('notice')
+      $('#version-notice-text').html('<a href="http://fish.cateyes.blue/">Menu fish</a> 有新版本：' + data.v)
+    }else{
+      $('#version-notice-text').html('您的应用是最新版本')
+    }
+  }
+  $.get('http://fish.cateyes.blue/version.json?' + Date.now(), function(data){
+    updateNotice(data)
+  }, 'json')
 })

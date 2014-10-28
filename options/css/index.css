@@ -131,6 +131,22 @@ h1.nav-header {
   cursor: pointer;
   padding: 0;
 }
+.nav-list .help button {
+  position: relative;
+}
+.nav-list .help button:after {
+  content: '●';
+  color: #ec407a;
+  position: absolute;
+  right: -12px;
+  top: -8px;
+  font-family: arial, sans-serif;
+  font-size: 18px;
+  visibility: hidden;
+}
+.nav-list .help.notice button:after {
+  visibility: visible;
+}
 .nav-list li {
   height: 35px;
   line-height: 35px;
@@ -157,6 +173,9 @@ h1.nav-header {
 }
 .main-section {
   display: none;
+}
+.main-section h3 {
+  margin-top: 2em;
 }
 .sub-header {
   font-size: 30px;
