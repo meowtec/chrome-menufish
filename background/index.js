@@ -26,7 +26,7 @@ var baiduImageSearch = {
 
 // APP KEY
 var appKeys = {
-  'weibo': '1673339308'
+  'weibo': ''
 }
 
 // 初次使用初始化 App
