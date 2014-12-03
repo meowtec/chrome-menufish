@@ -69,6 +69,10 @@ var defaultRules = {
     {
       "name": "微博",
       "url": "http://s.weibo.com/weibo/{%word%}"
+    },
+    {
+      "name": "百度翻译",
+      "url": "http://fanyi.baidu.com/#auto/auto/{%word%}"
     }
   ]
 }
