@@ -4,7 +4,7 @@ cp -r ./manifest.json ./options ./background ./assets ./content ../fishmenu
 7z a -tzip ../fishmenu.zip ../fishmenu
 
 # 开发完毕
-# 版本升级，manifest.json 和 options.js
+# 版本升级（version 和 build），manifest.json 和 options.js
 # 打包上传
 # 下载最新crx
 # crx 分别复制到 fish.cateyes.blue 和 github 项目
