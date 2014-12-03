@@ -7,7 +7,7 @@ var lastVersion = btn.getAttribute('data-version')
 if(build === lastBuild){
   btn.innerHTML = '已安装'
   btn.disabled = true
-}else if(build<lastBuild{
+}else if(build<lastBuild){
   btn.innerHTML = '升级到最新版：v' + lastVersion
 }
 
