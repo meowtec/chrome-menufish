@@ -14,8 +14,8 @@ $(function(){
 
   // 更新
   var version = {
-    v: '1.1.8',
-    build: 9
+    v: '1.2.0',
+    build: 10
   }
   $('#cureent-version').html(version.v)
   var updateNotice = function(data){

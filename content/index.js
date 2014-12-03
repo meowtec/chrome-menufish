@@ -1,6 +1,6 @@
 var btn = document.getElementById('install-button')
-var build = 0
-var version = '1.1.8'
+var build = 10
+var version = '1.2.0'
 var lastBuild = Number(btn.getAttribute('data-build'))
 var lastVersion = btn.getAttribute('data-version')
 
