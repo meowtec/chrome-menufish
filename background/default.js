@@ -51,6 +51,10 @@ var defaultRules = {
       "url": "http://www.xiami.com/search?key={%word%}"
     },
     {
+      "name": "网易云音乐",
+      "url": "http://music.163.com/#/search/m/?s={%word%}&type=1"
+    },
+    {
       "name": "wiki",
       "url": "http://zh.wikipedia.org/wiki/{%word%}"
     },
