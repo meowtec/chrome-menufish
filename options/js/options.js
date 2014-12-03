@@ -17,7 +17,7 @@ $(function(){
     v: '1.2.0',
     build: 10
   }
-  $('#cureent-version').html(version.v)
+  $('#current-version').html(version.v)
   var updateNotice = function(data){
     var build = version.build
     if(data.build > build){
