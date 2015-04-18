@@ -9,10 +9,17 @@ window.ruleCtrl = function($scope) {
   }
   var ctrlInit = function () {
     $scope.rules = utils.getData('rules')
+    $scope.rules.search = $scope.rules.search || []
+    $scope.rules.share = $scope.rules.share || []
+
     $scope.settingMore = utils.getData('settingMore')
     $scope.$_suspend = {
-      search: {},
-      share: {}
+      search: {
+        enabled: true
+      },
+      share: {
+        enabled: true
+      }
     }
   }
   $scope.editClick = function (rule) {
@@ -36,7 +43,9 @@ window.ruleCtrl = function($scope) {
   $scope.addClick = function (type) {
     var rule = $scope.$_suspend[type]
     $scope.rules[type].push(rule)
-    $scope.$_suspend[type] = {}
+    $scope.$_suspend[type] = {
+      enabled: true
+    }
   }
   $scope.resetClick = function () {
     var resetConfirm = window.confirm("你确认重置选项吗？")
