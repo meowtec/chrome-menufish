@@ -33,7 +33,7 @@
     <h3>搜索</h3>
     <ul class="rule-list">
       <li ng-repeat="rule in rules.search" ng-class="{false: 'rule-disabled'}[rule.enabled]">
-        <div ng-if="!rule.$_edit" class="display">
+        <div ng-if="!rule.$_edit">
           <span class="rule-name">{{rule.name}}</span>
           <span class="rule-url">{{rule.url}}</span>
           <button ng-click="upClick(rule)" class="icon icon-up" title="上移"></button>
