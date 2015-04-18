@@ -51,6 +51,24 @@ window.ruleCtrl = function($scope) {
       $scope.$digest();
     })
   }
+  $scope.upClick = function (rule, family) {
+    var rules = this.rules[family]
+    var count = rules.length
+    var index = rules.indexOf(rule)
+    var indexEx = (count + index - 1) % count
+    // exchange
+    rules[index] = rules[indexEx]
+    rules[indexEx] = rule
+  }
+  $scope.downClick = function (rule, family) {
+    var rules = this.rules[family]
+    var count = rules.length
+    var index = rules.indexOf(rule)
+    var indexEx = (count + index + 1) % count
+    // exchange
+    rules[index] = rules[indexEx]
+    rules[indexEx] = rule
+  }
   $scope.$watch('rules',
     function () {
       saveOptions()
