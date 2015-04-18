@@ -1,3 +1,5 @@
+lessc ./options/css/index.less > ./options/css/index.css
+
 rm -rf ../fishmenu ../fishmenu.zip
 mkdir ../fishmenu
 cp -r ./manifest.json ./options ./background ./assets ./content ../fishmenu

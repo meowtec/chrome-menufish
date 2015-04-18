@@ -33,25 +33,27 @@
     <h3>搜索</h3>
     <ul class="rule-list">
       <li ng-repeat="rule in rules.search" ng-class="{false: 'rule-disabled'}[rule.enabled]">
-        <div ng-if="!rule.$_edit" class="display">
+        <div ng-if="!rule.$_edit">
           <span class="rule-name">{{rule.name}}</span>
           <span class="rule-url">{{rule.url}}</span>
-          <button ng-click="editClick(rule)" class="adm-icon icon-edit-alt" title="编辑"></button>
-          <button ng-click="deleteClick(rule, 'search')" class="adm-icon  icon-cancel-circle" title="删除"></button>
-          <input type="checkbox" ng-model="rule.enabled" class="on-off-checkbox" title="{{message.onoff[rule.enabled]}}">
+          <button ng-click="upClick(rule, rules.search)" class="icon icon-up" title="上移"></button>
+          <button ng-click="downClick(rule, rules.search)" class="icon icon-down" title="下移"></button>
+          <button ng-click="editClick(rule)" class="icon icon-edit" title="编辑"></button>
+          <button ng-click="deleteClick(rule, rules.search)" class="icon  icon-trash" title="删除"></button>
+          <input type="checkbox" ng-model="rule.enabled" class="icon icon-checkbox" title="{{message.onoff[rule.enabled]}}">
         </div>
         <div ng-if="rule.$_edit" class="rule-edit">
           <span class="rule-name"><input ng-model="rule.$_name"></span>
           <span class="rule-url"><input  ng-model="rule.$_url"></span>
-          <button ng-click="submitClick(rule)" class="adm-icon icon-ok" title="确定"></button>
-          <button ng-click="cancelClick(rule)" class="adm-icon icon-ccw" title="撤销"></button>
+          <button ng-click="submitClick(rule)" class="icon icon-ok" title="确定"></button>
+          <button ng-click="cancelClick(rule)" class="icon icon-ccw" title="撤销"></button>
         </div>
       </li>
     </ul>
     <div class="rule-edit">
       <span class="rule-name"><input ng-model="$_suspend.search.name" placeholder="name"></span>
       <span class="rule-url"><input ng-model="$_suspend.search.url" placeholder="url"></span>
-      <button ng-click="addClick('search')" class="adm-icon icon-ok" title="确定"></button>
+      <button ng-click="addClick('search')" class="icon icon-ok" title="确定"></button>
     </div>
 
     <h3>分享</h3>
@@ -60,35 +62,37 @@
         <div ng-if="!rule.$_edit" class="display">
           <span class="rule-name">{{rule.name}}</span>
           <span class="rule-url">{{rule.url}}</span>
-          <button ng-click="editClick(rule)" class="adm-icon icon-edit-alt" title="编辑"></button>
-          <button ng-click="deleteClick(rule, 'share')" class="adm-icon icon-cancel-circle" title="删除"></button>
-          <input type="checkbox" ng-model="rule.enabled" class="on-off-checkbox" title="{{message.onoff[rule.enabled]}}">
+          <button ng-click="upClick(rule, rules.share)" class="icon icon-up" title="上移"></button>
+          <button ng-click="downClick(rule, rules.share)" class="icon icon-down" title="下移"></button>
+          <button ng-click="editClick(rule)" class="icon icon-edit" title="编辑"></button>
+          <button ng-click="deleteClick(rule, rules.share)" class="icon icon-trash" title="删除"></button>
+          <input type="checkbox" ng-model="rule.enabled" class="icon icon-checkbox" title="{{message.onoff[rule.enabled]}}">
         </div>
         <div ng-if="rule.$_edit" class="rule-edit">
           <span class="rule-name"><input ng-model="rule.$_name"></span>
           <span class="rule-url"><input ng-model="rule.$_url"></span>
-          <button ng-click="submitClick(rule)" class="adm-icon icon-ok" title="确定"></button>
-          <button ng-click="cancelClick(rule)" class="adm-icon icon-ccw" title="撤销"></button>
+          <button ng-click="submitClick(rule)" class="icon icon-ok" title="确定"></button>
+          <button ng-click="cancelClick(rule)" class="icon icon-ccw" title="撤销"></button>
         </div>
       </li>
     </ul>
     <div class="rule-edit">
       <span class="rule-name"><input ng-model="$_suspend.share.name" placeholder="name"></span>
       <span class="rule-url"><input ng-model="$_suspend.share.url" placeholder="url"></span>
-      <button ng-click="addClick('share')" class="adm-icon icon-ok" title="确定"></button>
+      <button ng-click="addClick('share')" class="icon icon-ok" title="确定"></button>
     </div>
     <h3>其他</h3>
     <ul class="rule-list">
       <li ng-class="{false: 'rule-disabled'}[settingMore.googleImageSearch]">
         <span class="rule-name">Google 搜图</span>
-        <input type="checkbox" ng-model="settingMore.googleImageSearch" class="on-off-checkbox" title="{{message.onoff[settingMore.googleImageSearch]}}">
+        <input type="checkbox" ng-model="settingMore.googleImageSearch" class="icon icon-checkbox" title="{{message.onoff[settingMore.googleImageSearch]}}">
       </li>
       <li ng-class="{false: 'rule-disabled'}[settingMore.baiduImageSearch]">
         <span class="rule-name">百度搜图</span>
-        <input type="checkbox" ng-model="settingMore.baiduImageSearch" class="on-off-checkbox" title="{{message.onoff[settingMore.baiduImageSearch]}}">
+        <input type="checkbox" ng-model="settingMore.baiduImageSearch" class="icon icon-checkbox" title="{{message.onoff[settingMore.baiduImageSearch]}}">
       </li>
     </ul>
-    <button class="reset-button" ng-click="resetClick()"><i class="icon icon-attention"></i>重置</button>
+    <button class="reset-button" ng-click="resetClick()"><i class="icon icon-warning-empty"></i>重置</button>
   </div>
   <div id="help" class="main-section">
     <h2 class="sub-header">帮助</h2>
