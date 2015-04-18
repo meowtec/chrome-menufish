@@ -189,7 +189,7 @@ h1.nav-header {
 .rule-disabled {
   opacity: 0.5;
 }
-.adm-icon {
+.icon {
   font-size: 12px;
   color: #8bc34a;
   padding: 0;
@@ -198,27 +198,25 @@ h1.nav-header {
   border: none;
   background: transparent;
 }
-.on-off-checkbox {
+.icon-checkbox {
   -webkit-appearance: none;
   appearance: none;
   border: none;
 }
-.adm-icon:hover,
-.rule-list .on-off-checkbox:hover {
+.icon:hover {
   color: #fb8c00;
 }
-.on-off-checkbox {
-  font-family: "iconfontello";
-  color: #ccc;
+.reset-button .icon {
+  color: #fff;
 }
-.on-off-checkbox:checked {
+.icon-checkbox:checked {
   color: #8bc34a;
 }
-.on-off-checkbox:before {
-  content: '\e80c';
+.icon-checkbox:before {
+  content: '\e805';
 }
-.on-off-checkbox:checked:before {
-  content: '\e80a';
+.icon-checkbox:checked:before {
+  content: '\e804';
 }
 .rule-list .rule-name,
 .rule-edit .rule-name {
