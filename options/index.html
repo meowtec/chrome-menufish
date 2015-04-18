@@ -36,10 +36,10 @@
         <div ng-if="!rule.$_edit">
           <span class="rule-name">{{rule.name}}</span>
           <span class="rule-url">{{rule.url}}</span>
-          <button ng-click="upClick(rule, 'search')" class="icon icon-up" title="上移"></button>
-          <button ng-click="downClick(rule, 'search')" class="icon icon-down" title="下移"></button>
+          <button ng-click="upClick(rule, rules.search)" class="icon icon-up" title="上移"></button>
+          <button ng-click="downClick(rule, rules.search)" class="icon icon-down" title="下移"></button>
           <button ng-click="editClick(rule)" class="icon icon-edit" title="编辑"></button>
-          <button ng-click="deleteClick(rule, 'search')" class="icon  icon-trash" title="删除"></button>
+          <button ng-click="deleteClick(rule, rules.search)" class="icon  icon-trash" title="删除"></button>
           <input type="checkbox" ng-model="rule.enabled" class="icon icon-checkbox" title="{{message.onoff[rule.enabled]}}">
         </div>
         <div ng-if="rule.$_edit" class="rule-edit">
@@ -63,7 +63,7 @@
           <span class="rule-name">{{rule.name}}</span>
           <span class="rule-url">{{rule.url}}</span>
           <button ng-click="editClick(rule)" class="icon icon-edit" title="编辑"></button>
-          <button ng-click="deleteClick(rule, 'share')" class="icon icon-trash" title="删除"></button>
+          <button ng-click="deleteClick(rule, rules.share)" class="icon icon-trash" title="删除"></button>
           <input type="checkbox" ng-model="rule.enabled" class="icon icon-checkbox" title="{{message.onoff[rule.enabled]}}">
         </div>
         <div ng-if="rule.$_edit" class="rule-edit">

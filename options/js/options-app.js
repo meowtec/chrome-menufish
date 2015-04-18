@@ -30,8 +30,7 @@ window.ruleCtrl = function($scope) {
     rule.$_url = rule.$_url = null
     rule.$_edit = false
   }
-  $scope.deleteClick = function (rule, family) {
-    var rules = this.rules[family]
+  $scope.deleteClick = function (rule, rules) {
     rules.splice(rules.indexOf(rule), 1)
   }
   $scope.addClick = function (type) {
@@ -51,8 +50,7 @@ window.ruleCtrl = function($scope) {
       $scope.$digest();
     })
   }
-  $scope.upClick = function (rule, family) {
-    var rules = this.rules[family]
+  $scope.upClick = function (rule, rules) {
     var count = rules.length
     var index = rules.indexOf(rule)
     var indexEx = (count + index - 1) % count
@@ -60,8 +58,7 @@ window.ruleCtrl = function($scope) {
     rules[index] = rules[indexEx]
     rules[indexEx] = rule
   }
-  $scope.downClick = function (rule, family) {
-    var rules = this.rules[family]
+  $scope.downClick = function (rule, rules) {
     var count = rules.length
     var index = rules.indexOf(rule)
     var indexEx = (count + index + 1) % count
