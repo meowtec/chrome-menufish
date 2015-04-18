@@ -233,8 +233,8 @@ h1.nav-header {
   font-size: 12px;
   color: #999;
 }
-.rule-list .on-off-checkbox {
-  border: none;
+.rule-list .icon-down {
+  margin-right: 20px;
 }
 .rule-edit input {
   color: #8bc34a;
