@@ -15,10 +15,6 @@ if(!Array.prototype.find){
 
 var appData
 
-var googleImageSearch = {
-  "name": "Google 按图搜索",
-  "url": "https://images.google.com.hk/searchbyimage?image_url={%imageUrl%}&hl=zh-CN&newwindow=1&safe=strict"
-}
 var baiduImageSearch = {
   "name": "百度按图搜索",
   "url": "http://stu.baidu.com/i?objurl={%imageUrl%}&filename=&rt=0&rn=10&ftn=extend.chrome.contextMenu&ct=1&stt=0&tn=shituresult"
@@ -39,7 +35,6 @@ function appInit() {
   })
   localStorage.setItem('rules', JSON.stringify(defaultRules))
   localStorage.setItem('settingMore', JSON.stringify({
-    googleImageSearch: true,
     baiduImageSearch: true
   }))
 }
@@ -108,19 +103,6 @@ function initContextMenu() {
     })
   })
 
-  // google 按图搜索
-  if (appData.settingMore.googleImageSearch) {
-    var setting = {
-      "title": googleImageSearch.name,
-      "contexts": ["image"],
-      "onclick": function (img) {
-        var imgUrl = img.srcUrl
-        var search_url = googleImageSearch.url.replace(/{%imageUrl%}/g, encodeURI(imgUrl))
-        window.open(search_url)
-      }
-    }
-    chrome.contextMenus.create(setting)
-  }
   // baidu 按图搜索
   if (appData.settingMore.baiduImageSearch) {
     var setting = {
