@@ -1,3 +1,5 @@
+/* global angular */
+
 (function() {
   var utils = window.utils || {}
 
@@ -11,8 +13,8 @@
   }
 
   utils.saveData = function(name, data) {
-    localStorage.setItem(name, angular.toJson(data));
+    localStorage.setItem(name, angular.toJson(data))
   }
 
-  this.utils = utils
-}).call(window)
+  window.utils = utils
+})()
