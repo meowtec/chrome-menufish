@@ -104,7 +104,7 @@
         contexts: ['image'],
         onclick: function(img) {
           var imgUrl = img.srcUrl
-          var search_url = baiduImageSearch.url.replace(/{%imageUrl%}/g, encodeURI(imgUrl))
+          var search_url = baiduImageSearch.url.replace(/{%imageUrl%}/g, encodeURIComponent(imgUrl))
           window.open(search_url)
         }
       }
@@ -120,7 +120,7 @@
     if (shareUrl.search('weibo.com') > -1) {
       shareUrl = shareUrl + '&appkey=' + appKeys.weibo
     }
-    shareUrl = shareUrl.replace(/{%url%}/g, encodeURI(url)).replace(/{%title%}/g, encodeURI(title))
+    shareUrl = shareUrl.replace(/{%url%}/g, encodeURIComponent(url)).replace(/{%title%}/g, encodeURIComponent(title))
 
     window.open(shareUrl)
   }
@@ -129,7 +129,7 @@
     var itemId = item.menuItemId
     var keyword = item.selectionText
     var searchUrl = getItem(itemId, 'search').url
-    searchUrl = searchUrl.replace(/{%word%}/g, encodeURI(keyword))
+    searchUrl = searchUrl.replace(/{%word%}/g, encodeURIComponent(keyword))
 
     window.open(searchUrl)
   }
