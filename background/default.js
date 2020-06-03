@@ -74,5 +74,15 @@ window.defaultRules = {
       'name': '百度翻译',
       'url': 'http://fanyi.baidu.com/#auto/auto/{%word%}'
     }
+  ],
+  imageSearch: [
+    {
+      'name': 'Google 按图搜索',
+      'url': 'https://images.google.com.hk/searchbyimage?image_url={%imageUrl%}&hl=zh-CN&newwindow=1&safe=strict'
+    },
+    {
+      'name': 'Yandex 按图搜索',
+      'url': 'https://yandex.ru/images/search?text={%imageUrl%}&family=yes'
+    }
   ]
 }
