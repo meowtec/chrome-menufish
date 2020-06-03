@@ -30,7 +30,8 @@
 <div class="main-container" id="main-container">
   <div id="setting" class="main-section" style="display: block;" ng-controller="ruleCtrl"  ng-app>
     <h2 class="sub-header">设置</h2>
-    <h3>搜索</h3>
+    <h3>搜索
+          &nbsp<input type="checkbox" ng-model="switch.search" class="icon icon-checkbox" title="{{message.onoff[switch.search]}}"></h3>
     <ul class="rule-list">
       <li ng-repeat="rule in rules.search" ng-class="{false: 'rule-disabled'}[rule.enabled]">
         <div ng-if="!rule.$_edit">
@@ -56,7 +57,8 @@
       <button ng-click="addClick('search')" class="icon icon-ok" title="确定"></button>
     </div>
 
-    <h3>分享</h3>
+    <h3>分享
+          &nbsp<input type="checkbox" ng-model="switch.share" class="icon icon-checkbox" title="{{message.onoff[switch.share]}}"></h3>
     <ul class="rule-list">
       <li ng-repeat="rule in rules.share" ng-class="{false: 'rule-disabled'}[rule.enabled]">
         <div ng-if="!rule.$_edit" class="display">
@@ -81,14 +83,34 @@
       <span class="rule-url"><input ng-model="$_suspend.share.url" placeholder="url"></span>
       <button ng-click="addClick('share')" class="icon icon-ok" title="确定"></button>
     </div>
-    <h3>其他</h3>
+    <h3>以图搜图
+          &nbsp<input type="checkbox" ng-model="switch.imageSearch" class="icon icon-checkbox" title="{{message.onoff[switch.imageSearch]}}"></h3>
     <ul class="rule-list">
-      <li ng-class="{false: 'rule-disabled'}[settingMore.baiduImageSearch]">
-        <span class="rule-name">百度搜图</span>
-        <input type="checkbox" ng-model="settingMore.baiduImageSearch" class="icon icon-checkbox" title="{{message.onoff[settingMore.baiduImageSearch]}}">
+      <li ng-repeat="rule in rules.imageSearch" ng-class="{false: 'rule-disabled'}[rule.enabled]">
+        <div ng-if="!rule.$_edit" class="display">
+          <span class="rule-name">{{rule.name}}</span>
+          <span class="rule-url">{{rule.url}}</span>
+          <button ng-click="upClick(rule, rules.imageSearch)" class="icon icon-up" title="上移"></button>
+          <button ng-click="downClick(rule, rules.imageSearch)" class="icon icon-down" title="下移"></button>
+          <button ng-click="editClick(rule)" class="icon icon-edit" title="编辑"></button>
+          <button ng-click="deleteClick(rule, rules.imageSearch)" class="icon icon-trash" title="删除"></button>
+          <input type="checkbox" ng-model="rule.enabled" class="icon icon-checkbox" title="{{message.onoff[rule.enabled]}}">
+        </div>
+        <div ng-if="rule.$_edit" class="rule-edit">
+          <span class="rule-name"><input ng-model="rule.$_name"></span>
+          <span class="rule-url"><input ng-model="rule.$_url"></span>
+          <button ng-click="submitClick(rule)" class="icon icon-ok" title="确定"></button>
+          <button ng-click="cancelClick(rule)" class="icon icon-ccw" title="撤销"></button>
+        </div>
       </li>
     </ul>
+    <div class="rule-edit">
+      <span class="rule-name"><input ng-model="$_suspend.imageSearch.name" placeholder="name"></span>
+      <span class="rule-url"><input ng-model="$_suspend.imageSearch.url" placeholder="url"></span>
+      <button ng-click="addClick('imageSearch')" class="icon icon-ok" title="确定"></button>
+    </div>
     <button class="reset-button" ng-click="resetClick()"><i class="icon icon-warning-empty"></i>重置</button>
+    <button class="reset-button" ng-click="importClick()"><i class="icon icon-ccw"></i>导入</button>
   </div>
   <div id="help" class="main-section">
     <h2 class="sub-header">帮助</h2>
