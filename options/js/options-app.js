@@ -111,7 +111,7 @@
       true
     )
 
-    $scope.$watch('settingMore',
+    $scope.$watch('switch',
       function() {
         saveOptions()
       },
