@@ -131,26 +131,26 @@
       </p>
       <p>网上很多链接都是很长的一段，比如百度搜索：
         <code class="code-block">
-          http://www.baidu.com/s?wd=wordpress&amp;rsv_spt=1&amp;issp=1&amp;f=8&amp;rsv_bp=0&amp;ie=utf-8&amp;tn=baiduhome_pg&amp;rsv_enter=1&amp;rsv_sug3=16&amp;rsv_sug4=1380&amp;rsv_sug1=16&amp;rsv_sug2=0&amp;inputT=7390&amp;rsv_sug=1
+          https://www.baidu.com/s?wd=wordpress&amp;rsv_spt=1&amp;issp=1&amp;f=8&amp;rsv_bp=0&amp;ie=utf-8&amp;tn=baiduhome_pg&amp;rsv_enter=1&amp;rsv_sug3=16&amp;rsv_sug4=1380&amp;rsv_sug1=16&amp;rsv_sug2=0&amp;inputT=7390&amp;rsv_sug=1
         </code>
         这里面的每一个<code>&amp;aaa=bbb</code>都是一对参数，可以看到我们要搜索的参数是<code>wd=wordpress</code>，而其他的呢，有一些是百度做统计用的，还有的就不清楚了。我们可以试着精简掉：
         <code class="code-block">
-          http://www.baidu.com/s?wd=wordpress
+          https://www.baidu.com/s?wd=wordpress
         </code>
         发现也可以正常访问。
       </p>
       <p>最后，要添加百度到右键，只需要添加
         <code class="code-block">
-          http://www.baidu.com/s?wd={%word%}
+          https://www.baidu.com/s?wd={%word%}
         </code>
       </p>
       <br/>
       <h3>自定义分享</h3>
       <p>自定义分享的原理和前面一样的。要做的就是找到现成的url。</p>
       <p>现在很多网站都有分享组件，例如cnbeta。找到这样的网站，点击分享，浏览器会打开分享窗口。以分享到微博为例，新窗口的链接如下：</p>
-      <code class="code-block">http://service.weibo.com/share/share.php?url=http%3A%2F%2Fshare.baidu.com%2F%230-tsina-1-79265-397232819ff9a47a7b7e80a40613cfe1&title=%E7%99%BE%E5%BA%A6%E5%88%86%E4%BA%AB%EF%BC%8C%E4%B8%BA%E6%82%A8%E5%B8%A6%E6%9D%A5%E6%9B%B4%E5%A4%9A%E6%B5%81%E9%87%8F%20-%20%E7%99%BE%E5%BA%A6%E5%88%86%E4%BA%AB&appkey=1343713053&searchPic=false</code>
+      <code class="code-block">https://service.weibo.com/share/share.php?url=https%3A%2F%2Fshare.baidu.com%2F%230-tsina-1-79265-397232819ff9a47a7b7e80a40613cfe1&title=%E7%99%BE%E5%BA%A6%E5%88%86%E4%BA%AB%EF%BC%8C%E4%B8%BA%E6%82%A8%E5%B8%A6%E6%9D%A5%E6%9B%B4%E5%A4%9A%E6%B5%81%E9%87%8F%20-%20%E7%99%BE%E5%BA%A6%E5%88%86%E4%BA%AB&appkey=1343713053&searchPic=false</code>
       <p>啊，好长一段。</p>
-      <p>请注意<code class="code-block">url=http%3A%2F%2Fshare.baidu.com%2F%230-tsina-1-79265-397232819ff9a47a7b7e80a40613cfe1</code>
+      <p>请注意<code class="code-block">url=https%3A%2F%2Fshare.baidu.com%2F%230-tsina-1-79265-397232819ff9a47a7b7e80a40613cfe1</code>
         以及
         <code class="code-block">title=%E7%99%BE%E5%BA%A6%E5%88%86%E4%BA%AB%EF%BC%8C%E4%B8%BA%E6%82%A8%E5%B8%A6%E6%9D%A5%E6%9B%B4%E5%A4%9A%E6%B5%81%E9%87%8F%20-%20%E7%99%BE%E5%BA%A6%E5%88%86%E4%BA%AB</code>
       </p>
@@ -158,14 +158,14 @@
       这里的参数名不一定就是url和title，不同的社交平台可能有不同的约定。一般来说，url可能有<code>u,from,link</code>等等可能，而title也有可能是<code>t,name</code>等等。
       </p>
       <p>和前面类似，我们把参数替换，得到</p>
-      <code class="code-block">http://service.weibo.com/share/share.php?url={%url%}&title={%title%}</code>
+      <code class="code-block">https://service.weibo.com/share/share.php?url={%url%}&title={%title%}</code>
       <p>其他的参数都删掉。</p>
     </div>
   </div>
   <div id="about" class="main-section">
     <h2 class="sub-header">关于</h2>
     <h3>微博</h3>
-    <a href="http://weibo.com/u/2113729271" target="_blank"><img border="0" src="http://service.t.sina.com.cn/widget/qmd/2113729271/64e7ae81/1.png"/></a>
+    <a href="https://weibo.com/u/2113729271" target="_blank"><img border="0" src="weibo.png"/></a>
     <h3>github</h3>
     <a href="https://github.com/meowtec/chrome-menufish/" target="_blank">github.com/meowtec/chrome-menufish</a>
     <h3>版本</h3>
