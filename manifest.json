@@ -20,5 +20,6 @@
       "matches": ["http://fish.cateyes.blue/*"],
       "js": ["content/index.js"]
     }
-  ]
+  ],
+  "incognito": "split"
 }

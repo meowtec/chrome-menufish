@@ -7,7 +7,7 @@
   window.ruleCtrl = function($scope) {
 
     var saveOptions = function() {
-      utils.saveData('settingMore', $scope.settingMore)
+      utils.saveData('switch', $scope.switch)
       utils.saveData('rules', $scope.rules)
       chrome.extension.sendRequest({
         ask: 'reload'
@@ -15,16 +15,20 @@
     }
 
     var ctrlInit = function() {
+      $scope.switch = utils.getData('switch')
       $scope.rules = utils.getData('rules')
       $scope.rules.search = $scope.rules.search || []
       $scope.rules.share = $scope.rules.share || []
+      $scope.rules.imageSearch = $scope.rules.imageSearch || []
 
-      $scope.settingMore = utils.getData('settingMore')
       $scope.$_suspend = {
         search: {
           enabled: true
         },
         share: {
+          enabled: true
+        },
+        imageSearch: {
           enabled: true
         }
       }
@@ -90,6 +94,15 @@
       rules[index] = rules[indexEx]
       rules[indexEx] = rule
     }
+    
+    $scope.importClick = function () {
+      var importInfo=prompt("配置内容。备份请复制后保存；导入请粘贴后确认。",JSON.stringify($scope.rules));
+      if (importInfo!=null && importInfo!=""){
+        $scope.rules = JSON.parse(importInfo)
+        saveOptions()
+        window.alert("导入成功！")
+      }
+    }
 
     $scope.$watch('rules',
       function() {
@@ -98,7 +111,7 @@
       true
     )
 
-    $scope.$watch('settingMore',
+    $scope.$watch('switch',
       function() {
         saveOptions()
       },

@@ -4,11 +4,6 @@
   var defaultRules = window.defaultRules
   var appData
 
-  var baiduImageSearch = {
-    'name': '百度按图搜索',
-    'url': 'http://stu.baidu.com/i?objurl={%imageUrl%}&filename=&rt=0&rn=10&ftn=extend.chrome.contextMenu&ct=1&stt=0&tn=shituresult'
-  }
-
   // APP KEY
   var appKeys = {
     'weibo': ''
@@ -24,11 +19,17 @@
       item.enabled = true
     })
 
-    localStorage.setItem('rules', JSON.stringify(defaultRules))
+    defaultRules.imageSearch.forEach(function (item) {
+      item.enabled = true
+    })
 
-    localStorage.setItem('settingMore', JSON.stringify({
-      baiduImageSearch: true
+    //contextMenuSwitch
+    localStorage.setItem('switch', JSON.stringify({
+      search: true,
+      share: true,
+      imageSearch: true
     }))
+    localStorage.setItem('rules', JSON.stringify(defaultRules))
   }
 
   if (!getData().rules) {
@@ -38,7 +39,7 @@
   function getData() {
     return {
       rules: JSON.parse(localStorage.getItem('rules')),
-      settingMore: JSON.parse(localStorage.getItem('settingMore'))
+      switch: JSON.parse(localStorage.getItem('switch'))
     }
   }
 
@@ -52,63 +53,78 @@
 
     chrome.contextMenus.removeAll()
 
-    // 创建父菜单
-    var shareParentId = chrome.contextMenus.create({
-      title: '分享到...',
-      contexts: ['page']
-    }, function() {})
-
-    var searchParentId = chrome.contextMenus.create({
-      title: '搜索',
-      contexts: ['selection']
-    }, function() {})
-
     appData = getData()
 
-    // 分享
-    appData.rules.share.forEach(function(item) {
-      if (!item.enabled) {
-        return
-      }
+    // 创建父菜单
+    if(appData.switch.share) {
+      var shareParentId = chrome.contextMenus.create({
+        "title": "分享到...",
+        "contexts": ["page"]
+      }, function () {
+      })
 
-      var setting = {
-        title: item.name,
-        contexts: ['page'],
-        onclick: shareClick,
-        parentId: shareParentId
-      }
-
-      item.id = chrome.contextMenus.create(setting, function() {})
-    })
-
-    // 搜索
-    appData.rules.search.forEach(function(item) {
-      if (!item.enabled) {
-        return
-      }
-
-      var setting = {
-        title: item.name,
-        contexts: ['selection'],
-        onclick: searchClick,
-        parentId: searchParentId
-      }
-
-      item.id = chrome.contextMenus.create(setting, function() {})
-    })
-
-    // baidu 按图搜索
-    if (appData.settingMore.baiduImageSearch) {
-      var setting = {
-        title: baiduImageSearch.name,
-        contexts: ['image'],
-        onclick: function(img) {
-          var imgUrl = img.srcUrl
-          var search_url = baiduImageSearch.url.replace(/{%imageUrl%}/g, encodeURIComponent(imgUrl))
-          window.open(search_url)
+      // 分享
+      appData.rules.share.forEach(function (item) {
+        if (!item.enabled) {
+          return
         }
-      }
-      chrome.contextMenus.create(setting)
+        var setting = {
+          title: item.name,
+          contexts: ["page"],
+          onclick: shareClick,
+          parentId: shareParentId
+        }
+        item.id = chrome.contextMenus.create(setting, function () {
+        })
+      })
+    }
+
+    if(appData.switch.search) {
+      var searchParentId = chrome.contextMenus.create({
+        "title": "搜索",
+        "contexts": ["selection"]
+      }, function () {
+      })
+
+      // 搜索
+      appData.rules.search.forEach(function (item) {
+        if (!item.enabled) {
+          return
+        }
+        var setting = {
+          title: item.name,
+          contexts: ["selection"],
+          onclick: searchClick,
+          parentId: searchParentId
+        }
+        item.id = chrome.contextMenus.create(setting, function () {
+        })
+      })
+    }
+
+    if(appData.switch.imageSearch) {
+      var imageSearchParentId = chrome.contextMenus.create({
+        "title": "以图搜图",
+        "contexts": ["image"]
+      }, function () {
+      })
+
+      appData.rules.imageSearch.forEach(function (item) {
+        if (!item.enabled) {
+          return
+        }
+        var setting = {
+          title: item.name,
+          contexts: ["image"],
+          onclick: function (img) {
+            var imgUrl = img.srcUrl
+            var search_url = item.url.replace(/{%imageUrl%}/g, encodeURI(imgUrl))
+            window.open(search_url)
+          },
+          parentId: imageSearchParentId
+        }
+        chrome.contextMenus.create(setting)
+      })
     }
   }
 
