@@ -1,5 +1,5 @@
 build:
-	lessc ./options/css/index.less > ./options/css/index.css
+	npx lessc ./options/css/index.less > ./options/css/index.css
 
 package:
 	npm run build

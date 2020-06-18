@@ -32,7 +32,7 @@
     <h2 class="sub-header">设置</h2>
     <h3>搜索
           &nbsp<input type="checkbox" ng-model="switch.search" class="icon icon-checkbox" title="{{message.onoff[switch.search]}}"></h3>
-    <ul class="rule-list">
+    <ul ng-class="{'rule-list': true, 'rule-disabled': !switch.search}">
       <li ng-repeat="rule in rules.search" ng-class="{false: 'rule-disabled'}[rule.enabled]">
         <div ng-if="!rule.$_edit">
           <span class="rule-name">{{rule.name}}</span>
@@ -59,9 +59,9 @@
 
     <h3>分享
           &nbsp<input type="checkbox" ng-model="switch.share" class="icon icon-checkbox" title="{{message.onoff[switch.share]}}"></h3>
-    <ul class="rule-list">
+    <ul ng-class="{'rule-list': true, 'rule-disabled': !switch.share}">
       <li ng-repeat="rule in rules.share" ng-class="{false: 'rule-disabled'}[rule.enabled]">
-        <div ng-if="!rule.$_edit" class="display">
+        <div ng-if="!rule.$_edit">
           <span class="rule-name">{{rule.name}}</span>
           <span class="rule-url">{{rule.url}}</span>
           <button ng-click="upClick(rule, rules.share)" class="icon icon-up" title="上移"></button>
@@ -85,9 +85,9 @@
     </div>
     <h3>以图搜图
           &nbsp<input type="checkbox" ng-model="switch.imageSearch" class="icon icon-checkbox" title="{{message.onoff[switch.imageSearch]}}"></h3>
-    <ul class="rule-list">
+    <ul ng-class="{'rule-list': true, 'rule-disabled': !switch.imageSearch}">
       <li ng-repeat="rule in rules.imageSearch" ng-class="{false: 'rule-disabled'}[rule.enabled]">
-        <div ng-if="!rule.$_edit" class="display">
+        <div ng-if="!rule.$_edit">
           <span class="rule-name">{{rule.name}}</span>
           <span class="rule-url">{{rule.url}}</span>
           <button ng-click="upClick(rule, rules.imageSearch)" class="icon icon-up" title="上移"></button>

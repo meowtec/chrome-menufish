@@ -189,6 +189,9 @@ h1.nav-header {
 .rule-disabled {
   opacity: 0.5;
 }
+.rule-disabled.rule-list {
+  filter: grayscale(1);
+}
 .icon {
   font-size: 12px;
   color: #8bc34a;
@@ -232,6 +235,7 @@ h1.nav-header {
   width: 560px;
   font-size: 12px;
   color: #999;
+  vertical-align: top;
 }
 .rule-list .icon-down {
   margin-right: 20px;
