@@ -4,7 +4,7 @@ build:
 package:
 	make build
 	rm -rf _build && mkdir -p _build/fishmenu
-	cp -r ./manifest.json ./options ./background ./assets ./content _build/fishmenu
+	cp -r ./manifest.json ./options ./background ./assets _build/fishmenu
 	7z a -tzip ./_build/fishmenu.zip ./_build/fishmenu
 	rm -rf ./_build/fishmenu
 
