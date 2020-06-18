@@ -1,6 +1,6 @@
 {
   "name": "Menu fish",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "manifest_version": 2,
   "description": "右键菜单增强,为右键添加搜索和分享等功能。支持自定义搜索引擎和分享目标站点",
   "icons": {
@@ -14,12 +14,6 @@
     "scripts": ["background/default.js", "background/index.js"]
   },
   "permissions": ["contextMenus"],
-  "homepage_url": "http://fish.cateyes.blue/",
-  "content_scripts": [
-    {
-      "matches": ["http://fish.cateyes.blue/*"],
-      "js": ["content/index.js"]
-    }
-  ],
+  "homepage_url": "https://github.com/meowtec/chrome-menufish",
   "incognito": "split"
 }
