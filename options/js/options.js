@@ -16,24 +16,9 @@ $(function() {
 
   // 更新
   var version = {
-    v: '1.3.0',
-    build: 11
+    v: '1.4.0',
+    build: 12
   }
 
   $('#current-version').html(version.v)
-
-  var updateNotice = function(data) {
-    var build = version.build
-    if (data.build > build) {
-      $('#nav-list .help').addClass('notice')
-      $('#version-notice-text').html('<a href="http://fish.cateyes.blue/">Menu fish</a> 有新版本：' + data.v)
-    }
-    else {
-      $('#version-notice-text').html('您的应用是最新版本')
-    }
-  }
-
-  $.get('http://fish.cateyes.blue/version.json?' + Date.now(), function(data) {
-    updateNotice(data)
-  }, 'json')
 })
