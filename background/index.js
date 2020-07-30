@@ -1,6 +1,11 @@
 /* global chrome */
 
-(function() {
+//(function() {
+
+  //点击插件的图标重启右键菜单
+  chrome.browserAction.onClicked.addListener(function(tab) {
+    initContextMenu()
+  })
   var defaultRules = window.defaultRules
   var appData
 
@@ -162,4 +167,4 @@
   })
 
   initContextMenu()
-})()
+//})()
