@@ -1,5 +1,60 @@
 {
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "serve": "sirv public -p 16123",
+    "watch": "rollup -c -w",
+    "build": "rollup -c",
+    "tscheck": "tsc --noEmit",
+    "lint": "npm run tscheck && eslint src"
+  },
   "devDependencies": {
-    "less": "~1.7.5"
-  }
+    "@eslint/js": "^9.17.0",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/chrome": "^0.0.287",
+    "@types/cross-zip": "^4.0.2",
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.0.10",
+    "@types/react-dom": "^18.0.10",
+    "cross-zip": "^4.0.1",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "marked": "^15.0.4",
+    "prettier": "^3.4.2",
+    "rollup": "^4.29.1",
+    "rollup-plugin-scss": "^4.0.1",
+    "sass": "^1.83.0",
+    "sirv-cli": "^3.0.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.3.0",
+    "@mui/material": "^6.3.0",
+    "clsx": "^2.1.1",
+    "lodash-es": "^4.17.21",
+    "mitt": "^3.0.1",
+    "nanoid": "^5.0.9",
+    "react": "^18.0.10",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.0.10",
+    "swr": "^2.3.0",
+    "use-debounce": "^10.0.4"
+  },
+  "packageManager": "pnpm@9.12.3"
 }

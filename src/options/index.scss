@@ -1,0 +1,34 @@
+:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+body {
+  --primary-color: #ec407a;
+
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  font-family: Helvetica, Tahoma, Arial, STHeiti, sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: #f57c00;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sub-header {
+  font-size: 20px;
+  margin: 0;
+  padding: 24px 0;
+}

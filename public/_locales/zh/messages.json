@@ -1,0 +1,50 @@
+{
+  "settings": {
+    "message": "设置"
+  },
+  "help": {
+    "message": "帮助"
+  },
+  "about": {
+    "message": "关于"
+  },
+  "version": {
+    "message": "版本"
+  },
+  "actions_on_page": {
+    "message": "对页面进行操作"
+  },
+  "actions_on_page_desc": {
+    "message": "用于页面分享等场景"
+  },
+  "actions_on_selection": {
+    "message": "对选中内容进行操作"
+  },
+  "actions_on_selection_desc": {
+    "message": "用于搜索文字等场景"
+  },
+  "actions_on_image": {
+    "message": "对图片进行操作"
+  },
+  "actions_on_image_desc": {
+    "message": "使用于按图搜图等场景"
+  },
+  "restore_default_settings": {
+    "message": "恢复默认设置"
+  },
+  "add": {
+    "message": "添加"
+  },
+  "code_mode": {
+    "message": "代码模式"
+  },
+  "ok": {
+    "message": "确认"
+  },
+  "cancel": {
+    "message": "取消"
+  },
+  "apply": {
+    "message": "立即应用"
+  }
+}
