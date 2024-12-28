@@ -1,0 +1,31 @@
+.category-title {
+  display: flex;
+  align-items: center;
+
+  &-info {
+    color: #999;
+  }
+
+  &-input {
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px;
+    border-radius: 8px;
+    margin-right: 8px;
+
+    &:hover {
+      background: #fafafa;
+    }
+  }
+
+  & h4 {
+    font-size: 18px;
+    margin: 0;
+    margin-right: 8px;
+  }
+}
+
+.rule-list-add {
+  margin: 16px 30px;
+}

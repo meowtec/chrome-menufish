@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
 .idea
-options/css/index.css
-_build
+*.log
+public/dist
+public/manifest.json

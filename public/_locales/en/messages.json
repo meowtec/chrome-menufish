@@ -1,0 +1,50 @@
+{
+  "settings": {
+    "message": "settings"
+  },
+  "help": {
+    "message": "help"
+  },
+  "about": {
+    "message": "about"
+  },
+  "version": {
+    "message": "version"
+  },
+  "actions_on_page": {
+    "message": "actions on current page"
+  },
+  "actions_on_page_desc": {
+    "message": "for sharing on web pages"
+  },
+  "actions_on_selection": {
+    "message": "actions on selection"
+  },
+  "actions_on_selection_desc": {
+    "message": "for searching selection text"
+  },
+  "actions_on_image": {
+    "message": "actions on image"
+  },
+  "actions_on_image_desc": {
+    "message": "for searching image"
+  },
+  "restore_default_settings": {
+    "message": "Restore default settings"
+  },
+  "add": {
+    "message": "add"
+  },
+  "code_mode": {
+    "message": "code mode"
+  },
+  "ok": {
+    "message": "ok"
+  },
+  "cancel": {
+    "message": "cancel"
+  },
+  "apply": {
+    "message": "apply"
+  }
+}
