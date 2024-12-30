@@ -1,6 +1,10 @@
 import { groupCategories, metaProperties } from '../config/basic';
 import { readOptions } from '../services/index';
-import { MenuRule, MenuCategory } from '../types/index';
+import {
+  MenuRule,
+  MenuCategory,
+  DEFAULT_WHITESPACE_ENCODE,
+} from '../types/index';
 import replaceTemplate from '../utils/template';
 
 const { log } = console;
@@ -71,7 +75,7 @@ function createApp() {
 
     const {
       category,
-      rule: { url },
+      rule: { url, whitespaceEncode },
     } = menu;
 
     let templateData: {
@@ -108,7 +112,9 @@ function createApp() {
       default:
     }
 
-    const openUrl = replaceTemplate(url, templateData, s);
+    const openUrl = replaceTemplate(url, templateData, s, {
+      whitespaceEncode: whitespaceEncode ?? DEFAULT_WHITESPACE_ENCODE,
+    });
 
     log('open url', openUrl);
     void chrome.tabs.create({

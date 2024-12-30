@@ -74,12 +74,16 @@ export default function CodeEdit({ rules, onSubmit, onClose }: CodeEditProps) {
           className="code-edit-input"
           error={Boolean(parseError)}
           onChange={(e) => setValue(e.target.value)}
-          helperText={parseError ? `格式错误：${String(parseError)}` : null}
+          helperText={
+            parseError
+              ? `${chrome.i18n.getMessage('syntax_error')}：${String(parseError)}`
+              : null
+          }
         />
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>取消</Button>
-        <Button onClick={handleSubmit}>确认</Button>
+        <Button onClick={onClose}>{chrome.i18n.getMessage('cancel')}</Button>
+        <Button onClick={handleSubmit}>{chrome.i18n.getMessage('ok')}</Button>
       </DialogActions>
     </Dialog>
   );

@@ -1,50 +1,76 @@
 {
   "settings": {
-    "message": "settings"
+    "message": "Settings"
   },
   "help": {
-    "message": "help"
+    "message": "Help"
   },
   "about": {
-    "message": "about"
+    "message": "About"
   },
   "version": {
-    "message": "version"
+    "message": "Version"
   },
   "actions_on_page": {
-    "message": "actions on current page"
+    "message": "Actions on current page"
   },
   "actions_on_page_desc": {
-    "message": "for sharing on web pages"
+    "message": "For sharing on web pages"
   },
   "actions_on_selection": {
-    "message": "actions on selection"
+    "message": "Actions on selection"
   },
   "actions_on_selection_desc": {
-    "message": "for searching selection text"
+    "message": "For searching selection text"
   },
   "actions_on_image": {
-    "message": "actions on image"
+    "message": "Actions on image"
   },
   "actions_on_image_desc": {
-    "message": "for searching image"
+    "message": "For searching image"
   },
   "restore_default_settings": {
     "message": "Restore default settings"
   },
   "add": {
-    "message": "add"
+    "message": "Add"
   },
   "code_mode": {
-    "message": "code mode"
+    "message": "Code mode"
   },
   "ok": {
-    "message": "ok"
+    "message": "Ok"
   },
   "cancel": {
-    "message": "cancel"
+    "message": "Cancel"
   },
   "apply": {
-    "message": "apply"
+    "message": "Apply"
+  },
+  "title": {
+    "message": "Title"
+  },
+  "whitespace_encoding": {
+    "message": "Whitespace encoding"
+  },
+  "confirm_delete_title": {
+    "message": "Are you sure to delete?"
+  },
+  "confirm_delete_content": {
+    "message": "“$name$” will be deleted",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirm_reset_title": {
+    "message": "Are you sure to reset?"
+  },
+  "confirm_reset_content": {
+    "message": "Cannot be restored after resetting"
+  },
+  "syntax_error": {
+    "message": "Syntax error"
   }
 }

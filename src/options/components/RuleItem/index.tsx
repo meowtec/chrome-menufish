@@ -1,10 +1,22 @@
 import { memo } from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { IconButton, Switch, TextField } from '@mui/material';
+import {
+  FormControl,
+  IconButton,
+  InputLabel,
+  MenuItem,
+  Select,
+  Switch,
+  TextField,
+} from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
-import { MenuRule } from '../../../types';
+import {
+  DEFAULT_WHITESPACE_ENCODE,
+  MenuRule,
+  WhitespaceEncode,
+} from '../../../types';
 import { confirm } from '../../../utils/confirm';
 import './index.scss';
 
@@ -31,10 +43,17 @@ function RuleItem({ rule, onRuleChange, onRuleDelete }: RuleItemProps) {
   };
 
   const handleDelete = async () => {
-    if (await confirm('确认删除？', `“${rule.name}”将被删除，删除后无法撤销`)) {
+    if (
+      await confirm(
+        chrome.i18n.getMessage('confirm_delete_title'),
+        chrome.i18n.getMessage('confirm_delete_content', rule.name),
+      )
+    ) {
       onRuleDelete(rule);
     }
   };
+
+  const spaceEncodingId = `space-encode-${rule.key}`;
 
   return (
     <li className="rule-item" ref={setNodeRef} style={style} {...attributes}>
@@ -46,7 +65,7 @@ function RuleItem({ rule, onRuleChange, onRuleDelete }: RuleItemProps) {
 
       <TextField
         size="small"
-        label="name"
+        label={chrome.i18n.getMessage('title')}
         variant="standard"
         value={rule.name}
         onChange={(e) => update({ name: e.target.value })}
@@ -54,7 +73,7 @@ function RuleItem({ rule, onRuleChange, onRuleDelete }: RuleItemProps) {
 
       <TextField
         size="small"
-        label="url"
+        label="URL"
         variant="standard"
         value={rule.url}
         style={{
@@ -63,6 +82,27 @@ function RuleItem({ rule, onRuleChange, onRuleDelete }: RuleItemProps) {
         onChange={(e) => update({ url: e.target.value })}
       />
 
+      <FormControl style={{ minWidth: 80 }}>
+        <InputLabel htmlFor={spaceEncodingId} variant="standard">
+          {chrome.i18n.getMessage('whitespace_encoding')}
+        </InputLabel>
+        <Select
+          labelId={spaceEncodingId}
+          size="small"
+          variant="standard"
+          value={rule.whitespaceEncode ?? DEFAULT_WHITESPACE_ENCODE}
+          onChange={(e) => {
+            update({ whitespaceEncode: e.target.value as WhitespaceEncode });
+          }}
+        >
+          <MenuItem value={WhitespaceEncode.plus}>
+            a{WhitespaceEncode.plus}b
+          </MenuItem>
+          <MenuItem value={WhitespaceEncode.percent}>
+            a{WhitespaceEncode.percent}b
+          </MenuItem>
+        </Select>
+      </FormControl>
       <Switch
         size="small"
         checked={rule.enabled}
