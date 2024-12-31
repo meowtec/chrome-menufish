@@ -11,6 +11,7 @@ function normalizeRulesGroup(
     enabled: group?.enabled ?? true,
     title: group?.title,
     rules: removeNulls(group?.rules ?? []).map((item) => ({
+      ...item,
       key: item.key ?? generateId(),
       name: item.name ?? '',
       url: item.url ?? '',

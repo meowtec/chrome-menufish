@@ -2,6 +2,7 @@
   margin: 8px 0;
   display: flex;
   align-items: center;
+  gap: 16px;
 
   > .MuiTextField-root {
     margin-right: 8px;
@@ -13,6 +14,8 @@
 
   > .MuiTextField-root input {
     font-size: 14px;
+    padding-top: 3px;
+    padding-bottom: 6px;
   }
 
   &:not(:hover) > .MuiTextField-root .MuiInput-underline::before {

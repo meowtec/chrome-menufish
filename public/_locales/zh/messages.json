@@ -46,5 +46,34 @@
   },
   "apply": {
     "message": "立即应用"
+  },
+  "title": {
+    "message": "标题"
+  },
+  "whitespace_encoding": {
+    "message": "空格编码"
+  },
+  "confirm_delete_title": {
+    "message": "确认删除吗？"
+  },
+  "confirm_delete_content": {
+    "message": "“$name$”将被删除，删除后无法撤销",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirm_reset_title": {
+    "message": "确认重置到默认初始配置吗？"
+  },
+  "confirm_reset_content": {
+    "message": "重置后无法恢复"
+  },
+  "syntax_error": {
+    "message": "语法错误"
+  },
+  "default": {
+    "message": "默认"
   }
 }
