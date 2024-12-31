@@ -119,6 +119,7 @@ function createApp() {
     log('open url', openUrl);
     void chrome.tabs.create({
       url: openUrl,
+      index: tab.index + 1,
     });
   };
 
