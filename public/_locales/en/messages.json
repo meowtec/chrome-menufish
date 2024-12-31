@@ -72,5 +72,8 @@
   },
   "syntax_error": {
     "message": "Syntax error"
+  },
+  "default": {
+    "message": "Default"
   }
 }

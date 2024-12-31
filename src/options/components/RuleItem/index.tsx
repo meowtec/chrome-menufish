@@ -82,7 +82,7 @@ function RuleItem({ rule, onRuleChange, onRuleDelete }: RuleItemProps) {
         onChange={(e) => update({ url: e.target.value })}
       />
 
-      <FormControl style={{ minWidth: 80 }}>
+      <FormControl style={{ minWidth: 100 }}>
         <InputLabel htmlFor={spaceEncodingId} variant="standard">
           {chrome.i18n.getMessage('whitespace_encoding')}
         </InputLabel>
@@ -96,7 +96,7 @@ function RuleItem({ rule, onRuleChange, onRuleDelete }: RuleItemProps) {
           }}
         >
           <MenuItem value={WhitespaceEncode.plus}>
-            a{WhitespaceEncode.plus}b
+            a{WhitespaceEncode.plus}b ({chrome.i18n.getMessage('default')})
           </MenuItem>
           <MenuItem value={WhitespaceEncode.percent}>
             a{WhitespaceEncode.percent}b
