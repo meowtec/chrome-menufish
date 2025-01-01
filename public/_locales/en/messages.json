@@ -75,5 +75,8 @@
   },
   "default": {
     "message": "Default"
+  },
+  "empty_rule": {
+    "message": "Empty rule"
   }
 }

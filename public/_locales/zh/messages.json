@@ -75,5 +75,8 @@
   },
   "default": {
     "message": "默认"
+  },
+  "empty_rule": {
+    "message": "空规则"
   }
 }

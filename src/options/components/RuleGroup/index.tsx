@@ -13,13 +13,13 @@ import {
   verticalListSortingStrategy,
   arrayMove,
 } from '@dnd-kit/sortable';
-import AddCircleIcon from '@mui/icons-material/AddCircleOutline';
 import HelpIcon from '@mui/icons-material/HelpOutline';
-import { Button, Switch, Tooltip } from '@mui/material';
+import { Switch, Tooltip } from '@mui/material';
 import { ChangeEvent, memo } from 'react';
 import { metaProperties } from '../../../config/basic';
 import { MenuCategory, MenuRule, RulesGroup } from '../../../types';
 import RuleItem from '../RuleItem';
+import AddRuleButton from './AddRuleButton';
 import './index.scss';
 
 function RuleGroup({
@@ -85,16 +85,8 @@ function RuleGroup({
     }
   };
 
-  const handleAddNew = () => {
-    updateRules([
-      ...options.rules,
-      {
-        name: '',
-        url: '',
-        key: Math.random().toString(36),
-        enabled: true,
-      },
-    ]);
+  const handleAddNew = (rule: MenuRule) => {
+    updateRules([...options.rules, rule]);
   };
 
   const groupMeta = metaProperties[category];
@@ -134,9 +126,7 @@ function RuleGroup({
           </SortableContext>
         </ul>
         <div className="rule-list-add">
-          <Button startIcon={<AddCircleIcon />} onClick={handleAddNew}>
-            {chrome.i18n.getMessage('add')}
-          </Button>
+          <AddRuleButton category={category} onAdd={handleAddNew} />
         </div>
       </div>
     </DndContext>
