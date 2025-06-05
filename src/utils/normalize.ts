@@ -27,6 +27,7 @@ export function normalizeRules(
     page: normalizeRulesGroup(rules.page),
     selection: normalizeRulesGroup(rules.selection),
     image: normalizeRulesGroup(rules.image),
+    link: normalizeRulesGroup(rules.link),
   };
 }
 

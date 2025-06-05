@@ -29,6 +29,12 @@
   "actions_on_image_desc": {
     "message": "使用于按图搜图等场景"
   },
+  "actions_on_link": {
+    "message": "对链接进行操作"
+  },
+  "actions_on_link_desc": {
+    "message": "用于链接代理、分享等场景"
+  },
   "restore_default_settings": {
     "message": "恢复默认设置"
   },

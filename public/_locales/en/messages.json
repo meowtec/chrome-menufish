@@ -29,6 +29,12 @@
   "actions_on_image_desc": {
     "message": "For searching image"
   },
+  "actions_on_link": {
+    "message": "Actions on link"
+  },
+  "actions_on_link_desc": {
+    "message": "For link proxy, sharing, etc."
+  },
   "restore_default_settings": {
     "message": "Restore default settings"
   },

@@ -1,4 +1,4 @@
-export type MenuCategory = 'page' | 'selection' | 'image';
+export type MenuCategory = 'page' | 'selection' | 'image' | 'link';
 
 export const WhitespaceEncode = {
   plus: '+',

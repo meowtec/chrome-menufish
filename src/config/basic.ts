@@ -1,6 +1,11 @@
 import { MenuCategory } from '../types/index';
 
-export const groupCategories: MenuCategory[] = ['page', 'selection', 'image'];
+export const groupCategories: MenuCategory[] = [
+  'page',
+  'selection',
+  'image',
+  'link',
+];
 
 export interface MenuProperties {
   contexts: chrome.contextMenus.ContextType[];
@@ -25,5 +30,11 @@ export const metaProperties: Record<MenuCategory, MenuProperties> = {
     contexts: ['image'],
     title: chrome.i18n.getMessage('actions_on_image'),
     description: chrome.i18n.getMessage('actions_on_image_desc'),
+  },
+
+  link: {
+    contexts: ['link'],
+    title: chrome.i18n.getMessage('actions_on_link'),
+    description: chrome.i18n.getMessage('actions_on_link_desc'),
   },
 };

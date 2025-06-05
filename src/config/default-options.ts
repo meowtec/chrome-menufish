@@ -2,7 +2,23 @@ import { AppOptions, MenuCategory, MenuRule } from '../types/index';
 
 export const presetRulesMap: Record<MenuCategory, Omit<MenuRule, 'enabled'>[]> =
   {
-    page: [],
+    page: [
+      {
+        key: '新浪微博',
+        name: '新浪微博',
+        url: 'https://service.weibo.com/share/share.php?url={%url%}&title={%title%}',
+      },
+      {
+        key: 'qq空间',
+        name: 'qq空间',
+        url: 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={%url%}&title={%title%}',
+      },
+      {
+        key: '豆瓣',
+        name: '豆瓣',
+        url: 'https://www.douban.com/recommend/?url={%url%}&name={%title%}',
+      },
+    ],
     image: [],
     selection: [
       {
@@ -89,32 +105,23 @@ export const presetRulesMap: Record<MenuCategory, Omit<MenuRule, 'enabled'>[]> =
         url: 'https://www.reddit.com/search/?q={%word%}',
       },
     ],
+    link: [
+      {
+        key: 'ghproxy',
+        name: 'ghproxy',
+        url: 'https://ghproxy.com/{%url%}',
+      },
+    ],
   };
 
 const defaultOptions: AppOptions = {
   rules: {
     page: {
       enabled: true,
-      rules: [
-        {
-          enabled: false,
-          key: '新浪微博',
-          name: '新浪微博',
-          url: 'https://service.weibo.com/share/share.php?url={%url%}&title={%title%}',
-        },
-        {
-          enabled: false,
-          key: 'qq空间',
-          name: 'qq空间',
-          url: 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={%url%}&title={%title%}',
-        },
-        {
-          enabled: false,
-          key: '豆瓣',
-          name: '豆瓣',
-          url: 'https://www.douban.com/recommend/?url={%url%}&name={%title%}',
-        },
-      ],
+      rules: presetRulesMap.page.map((item) => ({
+        ...item,
+        enabled: true,
+      })),
     },
 
     selection: {
@@ -142,6 +149,14 @@ const defaultOptions: AppOptions = {
         //   url: 'https://yandex.ru/images/search?text={%imageUrl%}&family=yes',
         // },
       ],
+    },
+
+    link: {
+      enabled: false,
+      rules: presetRulesMap.link.map((item) => ({
+        ...item,
+        enabled: true,
+      })),
     },
   },
 };

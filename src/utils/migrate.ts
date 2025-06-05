@@ -46,6 +46,10 @@ export function transformLegacyDataToRules(
     image: createRulesGroup('imageSearch'),
     selection: createRulesGroup('search'),
     page: createRulesGroup('share'),
+    link: {
+      enabled: true,
+      rules: [],
+    },
   };
 }
 

@@ -109,6 +109,12 @@ function createApp() {
         };
         s = info.srcUrl;
         break;
+      case 'link':
+        templateData = {
+          url: info.linkUrl ?? '',
+        };
+        s = info.linkUrl;
+        break;
       default:
     }
 
