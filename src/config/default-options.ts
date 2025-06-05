@@ -109,7 +109,7 @@ export const presetRulesMap: Record<MenuCategory, Omit<MenuRule, 'enabled'>[]> =
       {
         key: 'ghproxy',
         name: 'ghproxy',
-        url: 'https://ghproxy.com/{%url%}',
+        url: 'https://ghproxy.net/{%url%}',
       },
     ],
   };
