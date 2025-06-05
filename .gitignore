@@ -4,3 +4,4 @@ node_modules/
 *.log
 public/dist
 public/manifest.json
+public-*.zip
