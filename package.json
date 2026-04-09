@@ -46,7 +46,7 @@
     "@mui/icons-material": "^6.3.0",
     "@mui/material": "^6.3.0",
     "clsx": "^2.1.1",
-    "lodash-es": "^4.17.21",
+    "lodash-es": "^4.18.1",
     "mitt": "^3.0.1",
     "nanoid": "^5.0.9",
     "react": "^18.0.10",
