@@ -20,7 +20,7 @@ export default {
     service_worker: 'dist/background.js',
     type: 'module',
   },
-  permissions: ['contextMenus', 'storage'],
+  permissions: ['contextMenus', 'storage', 'activeTab'],
   homepage_url: 'https://github.com/meowtec/chrome-menufish',
   incognito: 'split',
   default_locale: 'en',

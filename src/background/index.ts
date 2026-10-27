@@ -71,7 +71,11 @@ function createApp() {
     const menus = await createMenusConfig();
     log('menu click', info, tab, menus);
     const menu = menus.find((item) => item.id === info.menuItemId);
-    if (!menu || !tab?.url || !menu.rule) return;
+    // `tab.url` is redacted (empty) unless the extension has the `tabs` /
+    // `activeTab` permission or host permission for the page. `info.pageUrl`
+    // is always provided by the onClicked event, so fall back to it.
+    const pageUrl = tab?.url || info.pageUrl;
+    if (!menu || !pageUrl || !menu.rule) return;
 
     const {
       category,
@@ -91,15 +95,15 @@ function createApp() {
     switch (category) {
       case 'page':
         templateData = {
-          url: tab.url,
-          title: tab.title ?? '',
+          url: pageUrl,
+          title: tab?.title ?? '',
         };
-        s = tab.url;
+        s = pageUrl;
         break;
       case 'selection':
         templateData = {
           word: info.selectionText ?? '',
-          host: new URL(tab.url).host,
+          host: new URL(pageUrl).host,
         };
         s = info.selectionText;
         break;
@@ -125,7 +129,7 @@ function createApp() {
     log('open url', openUrl);
     void chrome.tabs.create({
       url: openUrl,
-      index: tab.index + 1,
+      index: typeof tab?.index === 'number' ? tab.index + 1 : undefined,
     });
   };
 
