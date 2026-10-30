@@ -138,8 +138,8 @@ export default function Settings() {
 
     if (optionsFromLegacy) {
       clearLegacyData();
-      setOptions(optionsFromLegacy);
       saveOptions(optionsFromLegacy);
+      void Promise.resolve(optionsFromLegacy).then(setOptions);
     } else {
       readOptions().then(setOptions);
     }

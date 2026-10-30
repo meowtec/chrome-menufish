@@ -13,7 +13,10 @@ interface Menu {
   id: string;
   parentId?: string;
   title: string;
-  contexts: chrome.contextMenus.ContextType[];
+  contexts: [
+    chrome.contextMenus.ContextType,
+    ...chrome.contextMenus.ContextType[],
+  ];
   category: MenuCategory;
   rule?: MenuRule;
 }

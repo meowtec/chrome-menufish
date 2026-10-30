@@ -29,4 +29,9 @@ export default tsEslint.config(
     rules: eslintReactHooks.configs.recommended.rules,
   },
   eslintPrettier,
+  {
+    rules: {
+      'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    },
+  },
 );

@@ -10,7 +10,7 @@ import typescript from '@rollup/plugin-typescript';
 import scss from 'rollup-plugin-scss';
 import replace from '@rollup/plugin-replace';
 import { marked } from 'marked';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 import manifest from './manifest.js';
 
 const production = !process.env.ROLLUP_WATCH;
